@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <style>
+        body {
+            padding: 30px;
+        }
+        input,
+        select,
+        button {
+            font-size: 16px;
+            padding: 5px 10px;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input type="text" id="left" placeholder="Left number">
+
+    <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+
+    <input type="text" id="right" placeholder="Right number">
+
+    <button id="tryBtn">Try me!</button>
+
+    <script>
+        const leftInput = document.getElementById("left");
+        const rightInput = document.getElementById("right");
+        const operatorSelect = document.getElementById("operator");
+        const tryBtn = document.getElementById("tryBtn");
+
+        function isPositiveInteger(value) {
+            return /^\d+$/.test(value);
+        }
+
+        tryBtn.addEventListener("click", function () {
+            const left = leftInput.value;
+            const right = rightInput.value;
+            const operator = operatorSelect.value;
+
+            if (!isPositiveInteger(left) || !isPositiveInteger(right)) {
+                alert("Error :(");
+                return;
+            }
+
+            const l = Number(left);
+            const r = Number(right);
+            let result;
+
+            if ((operator === "/" || operator === "%") && r === 0) {
+                alert("It's over 9000!");
+                console.log("It's over 9000!");
+                return;
+            }
+
+            switch (operator) {
+                case "+":
+                    result = l + r;
+                    break;
+                case "-":
+                    result = l - r;
+                    break;
+                case "*":
+                    result = l * r;
+                    break;
+                case "/":
+                    result = l / r;
+                    break;
+                case "%":
+                    result = l % r;
+                    break;
+            }
+
+            alert(result);
+            console.log(result);
+        });
+
+        function remindAlert() {
+            alert("Please, use me...");
+            setTimeout(remindAlert, 30000);
+        }
+
+        setTimeout(remindAlert, 30000);
+    </script>
+
+</body>
+
+</html>
