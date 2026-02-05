@@ -1,0 +1,46 @@
+.card {
+    width: 300px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.layout {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.profile-img {
+    width: 100%;
+    height: auto;
+}
+
+.login {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px;
+}
+
+.description {
+    color: gray;
+    font-size: 14px;
+}
+
+.location {
+    font-size: 13px;
+    padding: 20px;
+}
+
+.socials img {
+    width: 20px;
+    margin: 5px;
+}
+
+.contact-btn {
+    display: block;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 8px;
+    margin-top: 20px;
+    font-size: 20px;
+}

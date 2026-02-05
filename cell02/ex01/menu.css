@@ -1,0 +1,36 @@
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu a {
+    text-decoration: none;
+    color: white;
+    background-color: blue;
+    padding: 12px 20px;
+    display: block;
+}
+.dropdown {
+    position: relative;
+    width: 200px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #34495e;
+    width: 100%;
+    left: 0;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown-content li a {
+    background-color: #34495e;
+}
+
+
+.dropdown-content li a:hover {
+    background-color: #16c09e;
+}
+
